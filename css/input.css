@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  font-family: "Merriweather", serif;
+  font-weight: lighter;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0;
+}
+
+.container-main {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.bg-main-gradient {
+  background: linear-gradient(to bottom,
+      #000003,
+      #001747,
+      #00010eef);
+}
+
+.main-gradient {
+  background: linear-gradient(to right,
+      #1098c9,
+      #3315c9);
+}
+
+.btn-main {
+  @apply p-3 rounded-2xl;
+}
+
+.text-primary {
+  color: #194BFD;
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(to right, #1098c9, #3315c9) border-box;
+}
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, .2));
+  font-size: 60px;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes waviy {
+
+  0%,
+  40%,
+  100% {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
